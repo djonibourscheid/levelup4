@@ -6,10 +6,10 @@ Projetos desenvolvidos durante a 4° edição do projeto Level Up da Interact So
 
 ### Etapa 1️⃣
 
-- **[Lógica de programação](https://cursos.alura.com.br/course/logica-programacao-javascript-html)**:
+- **[Lógica de programação](https://cursos.alura.com.br/course/logica-programacao-javascript-html)**:  
   Conceitos de lógica de programação e como pensar para resolver problemas.
 
-- **[Java - primeiros passos](https://cursos.alura.com.br/course/java-criando-primeira-aplicacao)**:
+- **[Java - primeiros passos](https://cursos.alura.com.br/course/java-criando-primeira-aplicacao)**:  
   Primeiro passos em java
 
 ## 👋 Quem sou eu?
