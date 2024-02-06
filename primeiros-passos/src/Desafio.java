@@ -23,7 +23,7 @@ public class Desafio {
     boolean cancelar = false;
     do {
       String mensagemOperacao = """
-                  
+          ---------
           Operações
                   
           1- Consultar saldos
@@ -39,18 +39,47 @@ public class Desafio {
       //  Cases
       switch (opcao) {
         case 1:
-          System.out.println("Consultar saldos");
+          System.out.println("Seu saldo é de R$" + saldo);
           break;
+
         case 2:
-          System.out.println("Depositar valor");
+          boolean depositoValido = false;
+          do {
+            System.out.println("Informe o valor a depositar:");
+            double valor = leitura.nextDouble();
+
+            if (valor < 0) {
+              System.out.println("Valor inválido. Tente novamente.");
+            } else {
+              depositoValido = true;
+              saldo += valor;
+              System.out.println("Deposito efetuado! Saldo atualizado R$ " + saldo);
+            }
+          } while (!depositoValido);
           break;
+
         case 3:
-          System.out.println("Transferir valor");
+          boolean transferenciaValida = false;
+          do {
+            System.out.println("Informe o valor que deseja transferir:");
+            double valor = leitura.nextDouble();
+
+            if (valor < 0) {
+              System.out.println("Valor inválido. Tente novamente.");
+            } else if (valor > saldo) {
+              System.out.println("Valor maior que o saldo em conta. Tente novamente com um valor menor.");
+            } else {
+              transferenciaValida = true;
+              saldo -= valor;
+              System.out.println("Transferência efetuada! Saldo atualizado R$ " + saldo);
+            }
+          } while (!transferenciaValida);
           break;
+
         case 4:
-          System.out.println("Sair");
           cancelar = true;
           break;
+
         default:
           System.out.println("Operação inválida.");
           break;
