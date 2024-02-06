@@ -1,7 +1,7 @@
 public class CriarConta {
   public static void main(String[] args) {
     Conta primeiraConta = new Conta();
-    primeiraConta.setSaldo(2200);
+    primeiraConta.deposita(2200);
 
     if (primeiraConta.deposita(50)) {
       System.out.println("Valor depositado.");
@@ -21,8 +21,8 @@ public class CriarConta {
 
 
     Conta segundaConta = new Conta();
-    segundaConta.setSaldo(100);
-    System.out.println("Saldo segunda conta R$"+segundaConta.getSaldo());
+    segundaConta.deposita(100);
+    System.out.println("Saldo segunda conta R$" + segundaConta.getSaldo());
 
     if (primeiraConta.transfere(2000, segundaConta)) {
       System.out.println("A transferência foi efetuada.");
@@ -30,7 +30,7 @@ public class CriarConta {
       System.out.println("Valor a ser transferido é maior que o saldo da conta.");
     }
 
-    System.out.println("Saldo segunda conta atualizado R$"+segundaConta.getSaldo());
-    System.out.println("Saldo primeira conta atualizado R$"+primeiraConta.getSaldo());
+    System.out.println("Saldo segunda conta atualizado R$" + segundaConta.getSaldo());
+    System.out.println("Saldo primeira conta atualizado R$" + primeiraConta.getSaldo());
   }
 }

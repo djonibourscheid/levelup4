@@ -9,6 +9,6 @@ public class TestaBanco {
     conta.deposita(100);
     conta.setTitular(cliente);
 
-    System.out.println(conta.getTitular());
+    System.out.println(conta.getTitular().getNome());
   }
 }

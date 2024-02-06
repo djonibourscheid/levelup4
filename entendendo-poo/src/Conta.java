@@ -16,10 +16,6 @@ public class Conta {
     return conta;
   }
 
-  public void setConta(int conta) {
-    this.conta = conta;
-  }
-
   public int getAgencia() {
     return agencia;
   }
