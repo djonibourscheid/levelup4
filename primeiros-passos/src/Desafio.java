@@ -6,6 +6,7 @@ public class Desafio {
 
     //  Intro
     String nome = "José da Silva";
+    String tipoConta = "Corrente";
     double saldo = 2400;
 
     String boasVindas = """
@@ -13,9 +14,9 @@ public class Desafio {
         Dados iniciais do cliente:
                 
         Nome: %s
-        Tipo conta: Corrente
+        Tipo conta: %s
         Saldo inicial: R$ %.2f
-        ***********************""".formatted(nome, saldo);
+        ***********************""".formatted(nome, tipoConta, saldo);
     System.out.println(boasVindas);
 
 
