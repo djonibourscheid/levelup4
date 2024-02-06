@@ -4,12 +4,14 @@ public class Conta {
   private int agencia;
   private Cliente titular;
 
-  public double getSaldo() {
-    return saldo;
+  public Conta(int conta, int agencia, Cliente titular) {
+    this.conta = conta;
+    this.agencia = agencia;
+    this.titular = titular;
   }
 
-  public void setSaldo(double saldo) {
-    this.saldo = saldo;
+  public double getSaldo() {
+    return saldo;
   }
 
   public int getConta() {
@@ -20,17 +22,10 @@ public class Conta {
     return agencia;
   }
 
-  public void setAgencia(int agencia) {
-    this.agencia = agencia;
-  }
-
   public Cliente getTitular() {
     return titular;
   }
 
-  public void setTitular(Cliente titular) {
-    this.titular = titular;
-  }
 
   public boolean deposita(double valor) {
     if (valor < 0) {

@@ -1,6 +1,7 @@
 public class CriarConta {
   public static void main(String[] args) {
-    Conta primeiraConta = new Conta();
+    Cliente primeiroCliente = new Cliente("Djoni", "000", "dev");
+    Conta primeiraConta = new Conta(119, 001, primeiroCliente);
     primeiraConta.deposita(2200);
 
     if (primeiraConta.deposita(50)) {
@@ -19,8 +20,8 @@ public class CriarConta {
 
     System.out.println(primeiraConta.getSaldo());
 
-
-    Conta segundaConta = new Conta();
+    Cliente segundoCliente = new Cliente("Jão", "001", "desempregado");
+    Conta segundaConta = new Conta(001, 001, segundoCliente);
     segundaConta.deposita(100);
     System.out.println("Saldo segunda conta R$" + segundaConta.getSaldo());
 
