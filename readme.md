@@ -12,6 +12,9 @@ Projetos desenvolvidos durante a 4° edição do projeto Level Up da Interact So
 - **[Java - primeiros passos](https://cursos.alura.com.br/course/java-criando-primeira-aplicacao)**:  
   Primeiro passos em java
 
+- **[Java OO](https://cursos.alura.com.br/course/java-introducao-orientacao-objetos)**:  
+  Entendendo a Orientação a Objetos com java
+
 ## 👋 Quem sou eu?
 
 <a href="https://github.com/djonibourscheid">
