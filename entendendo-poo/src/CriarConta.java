@@ -33,5 +33,7 @@ public class CriarConta {
 
     System.out.println("Saldo segunda conta atualizado R$" + segundaConta.getSaldo());
     System.out.println("Saldo primeira conta atualizado R$" + primeiraConta.getSaldo());
+
+    System.out.println("Total de contas criadas é: " + Conta.getTotalDeContas());
   }
 }

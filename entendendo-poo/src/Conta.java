@@ -4,7 +4,10 @@ public class Conta {
   private int agencia;
   private Cliente titular;
 
+  private static int totalDeContas;
+
   public Conta(int conta, int agencia, Cliente titular) {
+    Conta.totalDeContas++;
     this.conta = conta;
     this.agencia = agencia;
     this.titular = titular;
@@ -24,6 +27,10 @@ public class Conta {
 
   public Cliente getTitular() {
     return titular;
+  }
+
+  public static int getTotalDeContas() {
+      return Conta.totalDeContas;
   }
 
 
