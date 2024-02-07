@@ -1,3 +1,5 @@
+import djoni.screenmatch.modelo.Filme;
+
 import java.util.Scanner;
 
 public class TesteFilme {

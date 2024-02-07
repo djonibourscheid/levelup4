@@ -1,3 +1,5 @@
+package djoni.screenmatch.modelo;
+
 public class Filme {
   private String nome;
   private int anoDeLancamento;
