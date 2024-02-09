@@ -1,6 +1,8 @@
 package screenmatch.modelo;
 
-public class Filme extends Titulo {
+import screenmatch.calculo.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
   private String diretor;
 
   public Filme(String nome, int anoDeLancamento, boolean incluidoNoPlano, String diretor) {
@@ -10,5 +12,10 @@ public class Filme extends Titulo {
 
   public void exibeFichaTecnica() {
     super.exibeFichaTecnica("Diretor", this.diretor);
+  }
+
+  @Override
+  public int getClassificacao() {
+    return (int) this.getAvaliacao()/2;
   }
 }

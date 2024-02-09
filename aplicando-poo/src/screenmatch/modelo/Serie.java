@@ -1,6 +1,8 @@
 package screenmatch.modelo;
 
-public class Serie extends Titulo {
+import screenmatch.calculo.Classificavel;
+
+public class Serie extends Titulo implements Classificavel {
   private boolean ativa;
   private int temporadas;
   private int episodiosPorTemporada;
@@ -45,5 +47,10 @@ public class Serie extends Titulo {
   @Override
   public int getDuracaoEmMinutos() {
     return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+  }
+
+  @Override
+  public int getClassificacao() {
+    return (int) this.getAvaliacao()/2;
   }
 }

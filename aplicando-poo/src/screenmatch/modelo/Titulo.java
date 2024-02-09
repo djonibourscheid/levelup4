@@ -69,7 +69,6 @@ public abstract class Titulo {
         Nome do título: %s
         Ano de lançamento do filme: %d
         Média das avaliações: %.1f
-                
         Quantidade de avaliações: %d
         Extras: %s
         -------------
