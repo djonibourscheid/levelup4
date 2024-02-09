@@ -1,6 +1,8 @@
 package projeto;
 
+import projeto.calculos.Calculadora;
 import projeto.modelos.Musica;
+import projeto.modelos.Playlist;
 import projeto.modelos.Podcast;
 
 public class Principal {
@@ -22,5 +24,16 @@ public class Principal {
     podcast1.curtir();
     podcast2.escutar();
     podcast2.curtir();
+
+    System.out.println();
+
+    Playlist playlist = new Playlist();
+    playlist.addAudio(musica1);
+    playlist.addAudio(podcast1);
+    playlist.addAudio(podcast2);
+
+    System.out.println("Duração total da lista de reprodução é de " + playlist.calcularTempo());
+    System.out.println("Há " + playlist.getQuantidadeAudios() + " itens na lista de reprodução.");
+
   }
 }

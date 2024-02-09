@@ -1,5 +1,7 @@
 package projeto.modelos;
 
+import projeto.calculos.Calculadora;
+
 public class Audio {
   private String nome;
   private int duracao;
@@ -25,22 +27,6 @@ public class Audio {
     return duracao;
   }
 
-  public String getDuracaoMinutos() {
-    int horas = 0;
-    int minutos = Math.floorDiv(duracao, 60);
-    int segundos = Math.floorMod(duracao, 60);
-
-    String mensagem = "";
-    if (minutos > 60) {
-      horas = Math.floorDiv(minutos, 60);
-      minutos = Math.floorMod(horas, 60);
-      mensagem += horas + "h ";
-    }
-
-    mensagem += "%dm %dseg".formatted(minutos, segundos);
-    return mensagem;
-  }
-
   public int getTotalDeReproducoes() {
     return totalDeReproducoes;
   }
@@ -57,6 +43,9 @@ public class Audio {
     this.curtidas = curtidas;
   }
 
+  public String calcularTempo() {
+    return Calculadora.calcularTempo(this.getDuracaoSegundos());
+  }
   public void exibeFichaTecnica() {
     String mensagem = """
         ------
@@ -66,7 +55,11 @@ public class Audio {
         Curtidas: %d
         Total de reporduções: %d
         ------
-        """.formatted(this.nome, this.getDuracaoMinutos(), this.compositor, this.curtidas, this.totalDeReproducoes);
+        """.formatted(this.nome,
+        this.calcularTempo(),
+        this.compositor,
+        this.curtidas,
+        this.totalDeReproducoes);
 
     System.out.println(mensagem);
   }
