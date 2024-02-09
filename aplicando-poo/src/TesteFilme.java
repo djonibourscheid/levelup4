@@ -1,4 +1,4 @@
-import djoni.screenmatch.modelo.Filme;
+import screenmatch.modelo.Filme;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class TesteFilme {
   public static void main(String[] args) {
     Scanner leitura = new Scanner(System.in);
 
-    Filme filme1 = new Filme("Baby driver", 2017, true);
+    Filme filme1 = new Filme("Baby driver", 2017, true, "diretor");
 
     for (int i = 0; i < 5; i++) {
       System.out.println("\nDitie sua nota de avaliação:");
