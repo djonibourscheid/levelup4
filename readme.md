@@ -15,6 +15,9 @@ Projetos desenvolvidos durante a 4° edição do projeto Level Up da Interact So
 - **[Java OO](https://cursos.alura.com.br/course/java-introducao-orientacao-objetos)**:  
   Entendendo a Orientação a Objetos com java
 
+- **[Java OO](https://cursos.alura.com.br/course/java-aplicando-orientacao-objetos)**:  
+  Aplicando a Orientação a Objetos com java
+
 ## 👋 Quem sou eu?
 
 <a href="https://github.com/djonibourscheid">
