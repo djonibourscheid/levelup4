@@ -5,14 +5,12 @@ import projeto.calculos.Calculadora;
 public class Audio {
   private String nome;
   private int duracao;
-  private String compositor;
   private int totalDeReproducoes;
   private int curtidas;
 
-  public Audio(String nome, int duracao, String compositor) {
+  public Audio(String nome, int duracao) {
     this.nome = nome;
     this.duracao = duracao;
-    this.compositor = compositor;
   }
 
   public String getNome() {
@@ -46,18 +44,17 @@ public class Audio {
   public String calcularTempo() {
     return Calculadora.calcularTempo(this.getDuracaoSegundos());
   }
+
   public void exibeFichaTecnica() {
     String mensagem = """
         ------
         Nome: %s
         Duração: %s
-        Compositor: %s
         Curtidas: %d
         Total de reporduções: %d
         ------
         """.formatted(this.nome,
         this.calcularTempo(),
-        this.compositor,
         this.curtidas,
         this.totalDeReproducoes);
 
@@ -65,13 +62,18 @@ public class Audio {
   }
 
   public void escutar() {
-    totalDeReproducoes++;
-    System.out.printf("%nVocê começou a escutar '%s'%n", this.nome);
+    this.totalDeReproducoes++;
+    System.out.printf("Você começou a escutar '%s'%n", this.nome);
     this.exibeFichaTecnica();
   }
 
   public void curtir() {
-    curtidas++;
+    this.curtidas++;
     System.out.printf("Curtida registrada. Agora '%s' tem %d curtidas.%n", this.nome, this.curtidas);
+  }
+
+  public void descurtir() {
+    this.curtidas--;
+    System.out.println("Curtida removida.");
   }
 }

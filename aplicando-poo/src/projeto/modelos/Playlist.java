@@ -38,4 +38,26 @@ public class Playlist {
     System.out.printf("'%s' foi removido da lista de reprodução. %d itens restantes.%n",
         audio.getNome(), this.quantidadeAudios);
   }
+
+  public String exibeFichaTecnica() {
+    String mensagem = """
+        -------
+        Duração total da lista de reprodução é de %s
+        Há %s itens na lista de reprodução.
+        -------
+        """.formatted(this.calcularTempo(), this.getQuantidadeAudios());
+
+    return mensagem;
+  }
+
+  public void escutar() {
+    System.out.printf("%nVocê começou a escutar sua lista de reprodução.%n");
+    System.out.println(this.exibeFichaTecnica());
+
+    for (Audio audio : reproducao) {
+      audio.escutar();
+    }
+
+    System.out.println("Fim da sua lista de reprodução.");
+  }
 }

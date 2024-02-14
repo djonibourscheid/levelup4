@@ -7,7 +7,7 @@ import projeto.modelos.Podcast;
 
 public class Principal {
   public static void main(String[] args) {
-    Musica musica1 = new Musica("Mina do condomínio", 400, "Seu Jorge");
+    Musica musica1 = new Musica("Mina do condomínio", 400, "Seu Jorge", "MPB");
     Podcast podcast1 = new Podcast("Bocadinhas 52 - A Vida é Uma Festa!", 3080, "Lucas Inutilismo");
     Podcast podcast2 = new Podcast("Podcast grandção mesmo muito grande.", 4000, "Eu mesmo.");
 
@@ -17,6 +17,7 @@ public class Principal {
     podcast1.setTotalDeReproducoes(200);
     podcast2.setCurtidas(3);
     podcast2.setTotalDeReproducoes(10);
+    podcast2.setDescricao("Programa é bom e fala das aventuras do carnaval.");
 
     musica1.escutar();
     musica1.curtir();
@@ -32,8 +33,6 @@ public class Principal {
     playlist.addAudio(podcast1);
     playlist.addAudio(podcast2);
 
-    System.out.println("Duração total da lista de reprodução é de " + playlist.calcularTempo());
-    System.out.println("Há " + playlist.getQuantidadeAudios() + " itens na lista de reprodução.");
-
+    playlist.escutar();
   }
 }
